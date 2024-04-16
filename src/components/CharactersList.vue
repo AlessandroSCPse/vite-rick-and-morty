@@ -1,11 +1,13 @@
 <script>
 import { store } from '../store.js';
 import CharacterCard from './CharacterCard.vue';
+import ResultsNumber from './ResultsNumber.vue';
 
 export default {
     name: 'CharactersList',
     components: {
-        CharacterCard
+        CharacterCard,
+        ResultsNumber
     },
     data() {
         return {
@@ -21,6 +23,8 @@ export default {
             <div class="characters-cards">
                 <CharacterCard v-for="character in store.characters" :key="character.id" :characterInfo="character"></CharacterCard>
             </div>
+
+            <ResultsNumber></ResultsNumber>
         </div>
     </section>
 </template>

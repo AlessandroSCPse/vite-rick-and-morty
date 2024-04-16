@@ -2,5 +2,7 @@ import { reactive } from "vue";
 
 export const store = reactive({
     characters: [],
-    isLoading: true
+    isLoading: true,
+    searchedName: '',
+    searchedStatus: ''
 });
